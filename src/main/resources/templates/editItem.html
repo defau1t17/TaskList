@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/edit-item.css}">
+</head>
+<body>
+
+<div class="edit-page-header-block">
+    <form th:action="@{/tasks/edit}" method="post">
+        <div>
+            <ul th:each="task : ${testList}">
+                <li class="edit-list" th:if="${task.id != editableId}">
+                    <p id="edit-item-task-name" th:text="${task.taskName}"></p>
+                    <p id="edit-item-task-description" th:text="${task.description}"></p>
+                    <select id="edit-item-task-priority">
+                        <option th:text="${task.priority}"></option>
+                    </select>
+                </li>
+                <li class="edit-list" th:if="${task.id == editableId}">
+                    <textarea id="editedTaskName" th:text="${task.taskName}" name="editedTaskName"></textarea>
+                    <textarea id="editedTaskDescription" th:text="${task.description}" name="editedTaskDescription"></textarea>
+                    <select id="editedTaskPriority" name="editedTaskPriority">
+                        <option th:each="priority : ${T(com.example.tasks_list_web_app.Entity.Priority).values()}"
+                                th:value="${priority}" th:text="${priority}"></option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+        <div id="edit-button-body">
+            <button id="edit-button">Edit</button>
+        </div>
+
+    </form>
+</div>
+
+<div id="additional-buttons-body">
+    <button class="additional-button"><a class="link" th:href="@{/tasks/addToList}">Cancel</a></button>
+    <button class="additional-button"><a class="link" th:href="@{/tasks/remove}">Remove</a></button>
+</div>
+
+</body>
+</html>

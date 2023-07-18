@@ -1,0 +1,173 @@
+* {
+    width: 100%;
+}
+
+#header-block {
+    width: 100%;
+    height: 100px;
+    display: flex;
+}
+
+#main-input {
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+#main-but-link {
+    width: 17%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main-but-link-edit {
+    width: 18%;
+    height: 100px;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main-textarea-description {
+    outline: none;
+    flex-grow: 4;
+    resize: none;
+    width: 300px;
+    height: 50px;
+    overflow: auto;
+    margin-left: 30px;
+    font-size: 17px;
+    border-radius: 1px;
+    border: 1px solid blanchedalmond;
+    font-family: "Times New Roman";
+}
+
+#main-submit-button {
+    height: 50px;
+    width: 250px;
+    background: #d2d2d2;
+    border: 1px solid blanchedalmond;
+    text-align: center;
+    border-radius: 1px;
+    font-family: "Times New Roman";
+    font-size: 21px;
+    margin-left: 30px;
+}
+
+#main-link-remove {
+    height: 50px;
+    width: 250px;
+    background: #d2d2d2;
+    border: 1px solid blanchedalmond;
+    text-align: center;
+    border-radius: 1px;
+    font-family: "Times New Roman";
+    font-size: 17px;
+}
+
+#main-input-taskName {
+    outline: none;
+    margin-left: 30px;
+    text-align: center;
+    width: 250px;
+    height: 50px;
+    font-size: 17px;
+    border-radius: 1px;
+    border: 1px solid blanchedalmond;
+    font-family: "Times New Roman";
+}
+
+#main-link-edit {
+    height: 50px;
+    width: 250px;
+    background: #d2d2d2;
+    border: 1px solid blanchedalmond;
+    text-align: center;
+    text-align: center;
+
+    border-radius: 1px;
+    font-family: "Times New Roman";
+    font-size: 17px;
+}
+
+#main-select-priority {
+    text-align: center;
+    width: 150px;
+    height: 50px;
+    border-radius: 1px;
+    border: 1px solid #d2d2d2;
+    margin-left: 30px;
+    background: white;
+    font-size: 17px;
+
+    font-family: "Times New Roman";
+}
+
+.link {
+    text-decoration: none;
+    font-size: 21px;
+    text-align: center;
+    font-family: "Times New Roman";
+    color: black;
+}
+
+
+.notes-block {
+    margin-top: 50px;
+    display: grid;
+    height: auto;
+}
+
+.lists {
+    list-style-type: none;
+    display: flex;
+}
+
+#main-note-taskName {
+    border: 1px solid bisque;
+    text-align: center;
+    width: 15%;
+    height: border-box;
+    font-family: "Times New Roman";
+    font-size: 20px;
+    border-radius: 1px;
+    overflow: auto;
+
+}
+
+#main-note-taskDescription {
+    justify-content: center;
+    margin: 10px;
+    border: 1px solid bisque;
+    width: 50%;
+    text-align: center;
+    height: min-content;
+    font-family: "Times New Roman";
+    font-size: 20px;
+    border-radius: 1px;
+    overflow: auto;
+
+}
+
+#main-note-priority {
+    min-height: 50px;
+    justify-content: center;
+
+    margin: 10px;
+    border: 1px solid bisque;
+    width: 15%;
+    text-align: center;
+    height: auto;
+    font-family: "Times New Roman";
+    font-size: 20px;
+    border-radius: 1px;
+}
+
+
+
+

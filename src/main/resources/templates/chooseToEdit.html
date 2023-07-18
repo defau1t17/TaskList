@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+    <link rel="stylesheet" th:href="@{/choose-to-edit.css}">
+</head>
+<body>
+
+
+<div class="choose-item-main-text-header">
+    <p id="choose-item-main-text">Choose item to edit</p>
+</div>
+
+<div id="error-message-body">
+    <h2 class="error-message" th:if="${message != null}" th:text="${message}"></h2>
+    <h2 class="error-message" th:if="${message == null}"></h2>
+</div>
+
+
+<div class="choose-item-body">
+    <form th:action="@{/tasks/chooseItem}" method="post">
+        <div id="choose-item">
+            <ul th:each="task : ${testList}">
+                <li id="choose-item-list">
+                    <input id="choose-item-radio" type="radio" name="taskIdEdit" th:value="${task.id}">
+                    <p id="choose-item-task-name" th:text="${task.taskName}"></p>
+                    <p id="choose-item-description" th:text="${task.description}"></p>
+                    <select id="choose-item-priority">
+                        <option th:text="${task.priority}"></option>
+                    </select>
+                    </input>
+                </li>
+            </ul>
+        </div>
+
+        <div id="choose-item-body">
+            <button id="choose-button">Choose</button>
+        </div>
+
+    </form>
+</div>
+
+<div id="additional-buttons-body">
+    <button class="additional-button"><a class="link" th:href="@{/tasks/addToList}">Cancel</a></button>
+    <button class="additional-button"><a class="link" th:href="@{/tasks/remove}">Remove</a></button>
+</div>
+
+</body>
+</html>

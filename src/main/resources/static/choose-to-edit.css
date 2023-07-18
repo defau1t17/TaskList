@@ -1,0 +1,141 @@
+* {
+    width: 100%;
+}
+
+#choose-item-main-text-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#choose-item-main-text {
+    text-align: center;
+    font-size: 35px;
+    font-family: "Times New Roman";
+    color: black;
+    font-weight: bold;
+}
+
+.choose-item-body {
+    margin-top: 50px;
+    display: grid;
+    height: auto;
+}
+
+#choose-item-list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+#choose-item-radio {
+    width: 5%;
+    height: 15px;
+}
+
+#choose-item-task-name {
+    border: 1px solid bisque;
+    min-height: 50px;
+    margin: 10px;
+    text-align: center;
+    width: 15%;
+    height: auto;
+    font-family: "Times New Roman";
+    font-size: 20px;
+    border-radius: 1px;
+    overflow: auto;
+
+}
+
+#choose-item-description {
+    justify-content: center;
+    margin: 10px;
+    border: 1px solid bisque;
+    width: 40%;
+    text-align: center;
+    height: min-content;
+    font-family: "Times New Roman";
+    font-size: 20px;
+    border-radius: 1px;
+    overflow: auto;
+
+}
+
+#choose-item-priority {
+    min-height: 50px;
+    justify-content: center;
+    margin: 10px;
+    border: 1px solid bisque;
+    width: 15%;
+    text-align: center;
+    height: auto;
+    font-family: "Times New Roman";
+    font-size: 20px;
+    border-radius: 1px;
+}
+
+#choose-item-body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#choose-button {
+    height: 50px;
+    width: 250px;
+    background: #d2d2d2;
+    border: 1px solid blanchedalmond;
+    text-align: center;
+    border-radius: 1px;
+    font-family: "Times New Roman";
+    font-size: 21px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#additional-buttons-body {
+    width: 100%;
+    margin-top: 50px;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.additional-button{
+    height: 50px;
+    width: 250px;
+    background: #d2d2d2;
+    border: 1px solid blanchedalmond;
+    text-align: center;
+    border-radius: 1px;
+    font-family: "Times New Roman";
+    font-size: 21px;
+    margin-left: 30px;
+}
+
+.link{
+    text-decoration: none;
+    font-size: 21px;
+    text-align: center;
+    font-family: "Times New Roman";
+    color: black;
+}
+#error-message-body{
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.error-message{
+    font-size: 15px;
+    color: crimson;
+    font-family: "Times New Roman";
+}
+
+

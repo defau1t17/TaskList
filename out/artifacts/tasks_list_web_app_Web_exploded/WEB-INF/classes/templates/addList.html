@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/styles.css}" rel="stylesheet" />
+</head>
+<body>
+
+`
+<div id="header-block">
+
+    <div id="main-input">
+        <form th:action="@{/tasks/addToList}" method="post">
+
+            <input name="taskName" type="text" placeholder="Task name" id="main-input-taskName">
+            <textarea name="description" type="text" placeholder="description"
+                      id="main-textarea-description"></textarea>
+            <select name="priority" id="main-select-priority">
+                <option th:each="colorOpt : ${T(com.example.tasks_list_web_app.Entity.Priority).values()}"
+                        th:value="${colorOpt}" th:text="${colorOpt}"></option>
+            </select>
+            <button id="main-submit-button">Submit</button>
+        </form>
+    </div>
+
+    <div id="main-but-link">
+        <button id="main-link-remove"><a class="link" th:href="@{/tasks/remove}">Remove task</a></button>
+    </div>
+    <div id="main-but-link-edit">
+        <button id="main-link-edit"><a class="link" th:href="@{/tasks/chooseItem}">Edit task</a></button>
+    </div>
+</div>
+
+<div class="notes-block">
+    <ul id="main-notes-list" th:each="task : ${testList}">
+        <li class="lists">
+            <p id="main-note-taskName" th:text="${task.taskName}"></p>
+            <p id="main-note-taskDescription" th:text="${task.description}"></p>
+            <select id="main-note-priority">
+                <option th:text="${task.priority}"></option>
+            </select>
+        </li>
+    </ul>
+</div>
+
+
+</body>
+</html>

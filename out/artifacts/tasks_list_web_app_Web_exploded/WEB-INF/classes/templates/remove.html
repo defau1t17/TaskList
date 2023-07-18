@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Remove</title>
+    <link rel="stylesheet" th:href="@{/remove-page.css}">
+
+</head>
+<body>
+
+
+<div id="remove-header">
+    <p id="remover-header-main-text"> Choose the item that you want to remove from your task list</p>
+</div>
+
+
+<div id="remove-item-body-main">
+    <form th:action="@{/tasks/remove}" method="post">
+        <div id="remove-item-body">
+            <ul th:each="task : ${testList}">
+                <li id="remove-item-list">
+                    <input id="check-box-remove-item" type="checkbox" name="selected" th:value="${task.id}">
+                    <p id="remove-task-name" th:text="${task.taskName}"></p>
+                    <p id="remove-task-description" th:text="${task.description}"></p>
+                    <select id="remove-task-priority">
+                        <option th:text="${task.priority}"></option>
+                    </select>
+                    </input>
+                </li>
+                </input>
+            </ul>
+        </div>
+        <div id="remove-button-body">
+            <button id="remove-button">Remove</button>
+        </div>
+
+
+    </form>
+</div>
+
+<div id="remove-footer">
+    <button id="cancel-button"><a class="link" th:href="@{/tasks/addToList}">Cancel</a></button>
+</div>
+
+
+</body>
+</html>
